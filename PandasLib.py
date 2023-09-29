@@ -61,10 +61,14 @@ data.horsepower = data['horsepower'].astype(float)
 data.to_csv("auto-mpg-clean.csv")
 
 
+#  get see the EDA( univariant or Multivariant) 
+pip install ydata-profiling
 
+from pandas_profiling import ProfileReport
+prof=ProfileReport(data)
+prof.to_file(output_file="auto-mpg.csv")
 
-
-
+# The above code will generate an HTML page that has Exploratory Data Analysis with the plotted Graph for better understanding of Data set 
 
 
 
